@@ -6,7 +6,7 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 20:54:10 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/24 16:00:31 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/04/27 18:09:28 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -33,7 +34,12 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int 	ft_atoi(const char *str);
 char 	*ft_strnstr(const char *big, const char *little, size_t len);
-size_t	strlcpy(char *dst, const char *src, size_t size);
-size_t	strlcat(char *dst, const char *src, size_t size); 
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void 	*ft_calloc(size_t nmemb, size_t size);
+char 	*ft_strdup(const char *s);
+char 	*ft_substr(char const *s, unsigned int start, size_t len);
+char 	*ft_strjoin(char const *s1, char const *s2);
+char 	*ft_strtrim(char const *s1, char const *set);
 
 #endif
