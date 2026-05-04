@@ -6,7 +6,7 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 08:48:29 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/30 14:30:11 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:54:53 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	get_len(int nb)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long	nb;
 	char	*str;
@@ -43,9 +43,9 @@ char *ft_itoa(int n)
 		return (NULL);
 	str[len] = '\0';
 	neg = (nb < 0);
-	if (neg) 
+	if (neg)
 	{
-		str[0]  = '-';
+		str[0] = '-';
 		nb = -nb;
 	}
 	while (len > neg)
@@ -57,18 +57,18 @@ char *ft_itoa(int n)
 	return (str);
 }
 
-int main() {
-	char	*res;
-	res = ft_itoa(42);
-	printf("%s\n", res);
-	res = ft_itoa(-42);
-	printf("%s\n", res);
-	res = ft_itoa(2147483647);
-	printf("%s\n", res);
-	res = ft_itoa(-2147483648);
-	printf("%s\n", res);
-	res = ft_itoa(0);
-	printf("%s\n", res);
-	res = ft_itoa(2147483648);
-	printf("%s\n", res);
-}
+// int main() {
+// 	char	*res;
+// 	res = ft_itoa(42);
+// 	printf("%s\n", res);
+// 	res = ft_itoa(-42);
+// 	printf("%s\n", res);
+// 	res = ft_itoa(2147483647);
+// 	printf("%s\n", res);
+// 	res = ft_itoa(-2147483648);
+// 	printf("%s\n", res);
+// 	res = ft_itoa(0);
+// 	printf("%s\n", res);
+// 	res = ft_itoa(2147483648);
+// 	printf("%s\n", res);
+// }

@@ -6,16 +6,16 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:49:01 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/04 11:36:13 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:54:01 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  count_words(const char *s, char c)
+size_t	count_words(const char *s, char c)
 {
-	size_t  count;
-	size_t  i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	i = 0;
@@ -29,10 +29,10 @@ size_t  count_words(const char *s, char c)
 			while (s[i] && s[i] != c)
 				i++;
 		}
-		i++;
 	}
 	return (count);
 }
+
 void	free_split(char **res)
 {
 	size_t	i;
@@ -44,15 +44,16 @@ void	free_split(char **res)
 	{
 		free(res[i]);
 		i++;
-	}	
+	}
 	free(res);
 }
-void	alloc_words(char **res, char c, const char* s)
+
+void	alloc_words(char **res, char c, const char *s)
 {
 	size_t	len;
 	size_t	word;
 	size_t	i;
-	
+
 	i = 0;
 	word = 0;
 	while (s[i])
@@ -65,16 +66,15 @@ void	alloc_words(char **res, char c, const char* s)
 			while (s[i + len] && s[i + len] != c)
 				len++;
 			res[word] = malloc(sizeof(char) * (len + 1));
-			if (!res[word++])
-				return (free_split(res), NULL);
-			ft_strlcpy(res, &s[i], len + 1);
+			if (!res[word])
+				return (free_split(res));
+			ft_strlcpy(res[word++], &s[i], len + 1);
 			i += len;
 		}
-		i++;
-	} 
+	}
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	size_t	count;
@@ -86,5 +86,6 @@ char **ft_split(char const *s, char c)
 	if (!res)
 		return (NULL);
 	alloc_words(res, c, s);
+	res[count] = NULL;
 	return (res);
 }

@@ -6,13 +6,13 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:40:28 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/27 18:07:54 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:51:10 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*total_s;
 
@@ -28,11 +28,11 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (total_s);
 }
 
-int main(){
-	char *str1 = "bonjour ";
-	char *str2 = "ca va ?";
-	char *total = ft_strjoin(str1, str2);
-	printf("total: %s\n", total);
-	free(total);
-	return (0);
-}
+// int main(){
+// 	char *str1 = "bonjour ";
+// 	char *str2 = "ca va ?";
+// 	char *total = ft_strjoin(str1, str2);
+// 	printf("total: %s\n", total);
+// 	free(total);
+// 	return (0);
+// }

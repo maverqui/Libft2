@@ -6,13 +6,13 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 13:06:09 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/04 10:57:00 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:58:08 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 

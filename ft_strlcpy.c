@@ -6,7 +6,7 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 13:50:06 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/24 15:59:28 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:49:28 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 	char dst[10];
 // 	char src[] = "abcd";
 // 	size_t ret;
-	
 // 	ret = ft_strlcpy(dst, src, 5);
 // 	printf("Source : %s (longueur %zu)\n", src, strlen(src));
 // 	printf("Destination : %s\n", dst);

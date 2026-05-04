@@ -6,15 +6,15 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 17:27:17 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/01 17:38:17 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:57:25 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst && lst->next)
+	while (lst && lst->next)
 		lst = lst->next;
 	return (lst);
 }

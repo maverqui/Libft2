@@ -6,13 +6,13 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 17:08:18 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/01 17:25:49 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:57:14 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

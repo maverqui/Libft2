@@ -6,15 +6,15 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:47:09 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/27 16:40:18 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:50:33 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	char*	s2;
+	char	*s2;
 	size_t	i;
 
 	i = 0;

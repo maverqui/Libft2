@@ -6,13 +6,13 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 12:06:49 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/30 15:34:28 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:55:01 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned	int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned	int, char))
 {
 	char	*str;
 	size_t	len;
@@ -34,23 +34,23 @@ char *ft_strmapi(char const *s, char (*f)(unsigned	int, char))
 	return (str);
 }
 
-char my_transform(unsigned int i, char c)
-{
-    if (i % 2 == 0 && (c >= 'a' && c <= 'z'))
-        return (c - 32);
-    return (c);
-}
+// char my_transform(unsigned int i, char c)
+// {
+//     if (i % 2 == 0 && (c >= 'a' && c <= 'z'))
+//         return (c - 32);
+//     return (c);
+// }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main(void)
-{
-    char *str = "hello world";
-    char *res;
-	res = ft_strmapi(str, &my_transform);
-    printf("Original : %s\n", str);
-    printf("Résultat : %s\n", res);
-    free(res);
-    return (0);
-}
+// int main(void)
+// {
+//     char *str = "hello world";
+//     char *res;
+// 	res = ft_strmapi(str, &my_transform);
+//     printf("Original : %s\n", str);
+//     printf("Résultat : %s\n", res);
+//     free(res);
+//     return (0);
+// }

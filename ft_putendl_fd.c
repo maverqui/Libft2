@@ -6,11 +6,13 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 16:11:42 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/30 16:15:11 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:55:51 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl_fd(char *s, int fd)
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;
 

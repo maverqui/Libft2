@@ -6,13 +6,13 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 13:55:03 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/04 10:50:27 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:57:03 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new || !lst)
 		return ;
@@ -24,13 +24,9 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 // {
 // 	t_list *a;
 // 	t_list *b;
-
 // 	a = ft_lstnew(NULL);
 // 	b = ft_lstnew(NULL);
-	
 // 	// [a]->NULL
-
 // 	ft_lstadd_front(&a, b);
-	
 // 	// [b]->[a]->NULL
 // }
