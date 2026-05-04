@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maeverqu <mae.verquin@learner.42.tech>     +#+  +:+       +#+        */
+/*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:49:01 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/04/29 19:33:28 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 11:36:13 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,28 @@ size_t  count_words(const char *s, char c)
 	}
 	return (count);
 }
-
-char **ft_split(char const *s, char c)
+void	free_split(char **res)
 {
-	char	**res;
 	size_t	i;
-	size_t	count;
+
+	i = 0;
+	if (!res)
+		return ;
+	while (res[i])
+	{
+		free(res[i]);
+		i++;
+	}	
+	free(res);
+}
+void	alloc_words(char **res, char c, const char* s)
+{
 	size_t	len;
 	size_t	word;
-
-	word = 0;
+	size_t	i;
+	
 	i = 0;
-	count = count_words(s, c);
-	if (!s)
-		return (NULL);
-	res = malloc(sizeof(char *) * (count + 1));
-	if (!res)
-		return (NULL);
+	word = 0;
 	while (s[i])
 	{
 		len = 0;
@@ -61,10 +66,25 @@ char **ft_split(char const *s, char c)
 				len++;
 			res[word] = malloc(sizeof(char) * (len + 1));
 			if (!res[word++])
-				return (NULL);
+				return (free_split(res), NULL);
 			ft_strlcpy(res, &s[i], len + 1);
+			i += len;
 		}
 		i++;
 	} 
+}
+
+char **ft_split(char const *s, char c)
+{
+	char	**res;
+	size_t	count;
+
+	count = count_words(s, c);
+	if (!s)
+		return (NULL);
+	res = malloc(sizeof(char *) * (count + 1));
+	if (!res)
+		return (NULL);
+	alloc_words(res, c, s);
 	return (res);
 }

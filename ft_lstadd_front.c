@@ -6,7 +6,7 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 13:55:03 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/01 17:03:51 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/04 10:50:27 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 	(*lst) = new;
 }
 
-int main(void)
-{
-	t_list *a;
-	t_list *b;
+// int main(void)
+// {
+// 	t_list *a;
+// 	t_list *b;
 
-	a = ft_lstnew(NULL);
-	b = ft_lstnew(NULL);
+// 	a = ft_lstnew(NULL);
+// 	b = ft_lstnew(NULL);
 	
-	// [a]->NULL
+// 	// [a]->NULL
 
-	ft_lstadd_front(&a, b);
+// 	ft_lstadd_front(&a, b);
 	
-	// [b]->[a]->NULL
-}
+// 	// [b]->[a]->NULL
+// }
