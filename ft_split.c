@@ -6,7 +6,7 @@
 /*   By: maeverqu <maeverqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:49:01 by maeverqu          #+#    #+#             */
-/*   Updated: 2026/05/04 16:54:01 by maeverqu         ###   ########.fr       */
+/*   Updated: 2026/05/05 12:19:22 by maeverqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	free_split(char **res)
 	while (res[i])
 	{
 		free(res[i]);
+		res[i] = NULL;
 		i++;
 	}
 	free(res);
